@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旅行チェックリスト</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Comic Sans MS", sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* 背景とナビゲーション */
+      .hero {
+        background-image: url("stuff.png"); /* 背景に沖縄の風景画像 */
+        background-size: cover;
+        background-position: center;
+        padding: 80px 0;
+        text-align: center;
+        color: rgb(255, 0, 0);
+      }
+
+      .hero h1 {
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      /* ナビゲーション */
+      nav {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ffcc00;
+      }
+
+      /* コンテンツセクション */
+      .content {
+        padding: 40px;
+        margin-top: 60px;
+        max-width: 900px;
+        margin: 60px auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #32cd32; /* 明るい緑 */
+      }
+
+      .checklist {
+        margin-top: 30px;
+      }
+
+      .checklist ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .checklist li {
+        margin: 10px 0;
+        font-size: 1.2em;
+      }
+
+      .checklist input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .btn {
+        display: block;
+        text-align: center;
+        background-color: #32cd32;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-top: 30px;
+      }
+
+      .btn:hover {
+        background-color: #228b22;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ヒーローセクション -->
+    <div class="hero">
+      <h1>沖縄旅行 3泊4日</h1>
+      <p>忘れ物は買えばええねん</p>
+    </div>
+
+    <!-- ナビゲーション -->
+    <nav>
+      <ul>
+        <li><a href="day1.html">1日目</a></li>
+        <li><a href="day2.html">2日目</a></li>
+        <li><a href="day3.html">3日目</a></li>
+        <li><a href="day4.html">4日目</a></li>
+        <li><a href="top.html">トップ</a></li>
+      </ul>
+    </nav>
+
+    <!-- コンテンツ -->
+    <div class="content">
+      <h2>旅行に必要なもの</h2>
+      <p>忘れたら現地調達</p>
+
+      <!-- チェックリスト -->
+      <div class="checklist">
+        <ul>
+          <li>
+            <input type="checkbox" id="passport" />
+            <label for="passport">パスポート</label>
+          </li>
+          <li>
+            <input type="checkbox" id="tickets" />
+            <label for="tickets">航空券</label>
+          </li>
+          <li>
+            <input type="checkbox" id="money" />
+            <label for="money">現金・カード</label>
+          </li>
+          <li>
+            <input type="checkbox" id="toothbrush" />
+            <label for="toothbrush">歯ブラシ</label>
+          </li>
+          <li>
+            <input type="checkbox" id="clothes" />
+            <label for="clothes">着替え</label>
+          </li>
+          <li>
+            <input type="checkbox" id="sunscreen" />
+            <label for="sunscreen">日焼け止め</label>
+          </li>
+          <li>
+            <input type="checkbox" id="camera" />
+            <label for="camera">カメラ</label>
+          </li>
+          <li>
+            <input type="checkbox" id="chargers" />
+            <label for="chargers">充電器</label>
+          </li>
+        </ul>
+      </div>
+
+      <a href="top.html" class="btn">トップページに戻る</a>
+    </div>
+  </body>
+</html>

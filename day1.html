@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1日目 - 沖縄旅行 3泊4日</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Comic Sans MS", sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* 背景とナビゲーション */
+      .hero {
+        background-image: url("sisa.png"); /* 背景に沖縄の風景画像 */
+        background-size: cover;
+        background-position: center;
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .hero h1 {
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      /* ナビゲーション */
+      nav {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ffcc00;
+      }
+
+      /* コンテンツセクション */
+      .content {
+        padding: 40px;
+        margin-top: 60px;
+        max-width: 900px;
+        margin: 60px auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #32cd32; /* 明るい緑 */
+      }
+
+      p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+
+      /* 予定リスト */
+      .schedule {
+        display: flex;
+        flex-direction: column; /* 1列縦並び */
+        gap: 20px; /* アイテム間の隙間 */
+        margin-top: 30px;
+      }
+
+      .schedule-item {
+        background-color: #ffeb3b;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .schedule-item h3 {
+        margin: 10px 0;
+        font-size: 1.5em;
+      }
+
+      .schedule-item p {
+        font-size: 1.1em;
+      }
+
+      /* スライドインアニメーション */
+      .content {
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ボタン */
+      .btn {
+        display: block;
+        text-align: center;
+        background-color: #32cd32;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-top: 30px;
+      }
+
+      .btn:hover {
+        background-color: #228b22;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ヒーローセクション -->
+    <div class="hero">
+      <h1>沖縄旅行 3泊4日</h1>
+      <p>1日目 - 沖縄本島の冒険</p>
+    </div>
+
+    <!-- ナビゲーション -->
+    <nav>
+      <ul>
+        <li><a href="day1.html">1日目</a></li>
+        <li><a href="day2.html">2日目</a></li>
+        <li><a href="day3.html">3日目</a></li>
+        <li><a href="day4.html">4日目</a></li>
+        <li><a href="top.html">トップ</a></li>
+        <!-- "全体の流れ"を"トップ"に変更 -->
+      </ul>
+    </nav>
+
+    <!-- コンテンツ -->
+    <div class="content">
+      <h2>1日目: 沖縄本島観光</h2>
+      <p>沖縄本島での最初の日は、素晴らしい景色を楽しみながら観光します。</p>
+
+      <!-- 予定リスト -->
+      <div class="schedule">
+        <div class="schedule-item">
+          <h3>7:00 - 関西国際空港出発</h3>
+          <p>関西国際空港から沖縄へ向けて出発。</p>
+        </div>
+        <div class="schedule-item">
+          <h3>10:00 - 那覇空港到着</h3>
+          <p>沖縄の那覇空港に到着。</p>
+        </div>
+        <div class="schedule-item">
+          <h3>11:00 - レンタカーゲット</h3>
+          <p>レンタカーを借りて、沖縄本島をドライブ。</p>
+        </div>
+        <div class="schedule-item">
+          <h3>14:00 - ホエールウォッチング</h3>
+          <p>沖縄で人気のホエールウォッチングを楽しみます。</p>
+        </div>
+      </div>
+
+      <a href="day2.html" class="btn">次の日へ</a>
+    </div>
+  </body>
+</html>
