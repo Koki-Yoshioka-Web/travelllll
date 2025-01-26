@@ -25,23 +25,24 @@
       }
 
       nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
+        display: flex; /* フレックスボックスでレイアウト */
+        justify-content: center; /* 横方向に中央揃え */
+        align-items: center; /* 縦方向も中央揃え */
+        list-style: none; /* リストスタイルを削除 */
+        margin: 0; /* 外側の余白を削除 */
+        padding: 0; /* 内側の余白を削除 */
       }
 
       nav ul li {
-        display: inline;
-        margin: 0 15px;
+        margin: 0 15px; /* 各メニューの間隔を均等に設定 */
       }
 
       nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-        text-transform: uppercase;
-        font-weight: bold;
+        color: white; /* 文字色 */
+        text-decoration: none; /* 下線を削除 */
+        font-size: 1.2em; /* フォントサイズ */
+        text-transform: uppercase; /* 大文字化 */
+        font-weight: bold; /* 太字 */
       }
 
       nav ul li a:hover {
