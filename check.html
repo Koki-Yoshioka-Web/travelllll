@@ -34,30 +34,32 @@
       /* ナビゲーション */
       nav {
         background-color: rgba(0, 0, 0, 0.6);
-        padding: 10px 20px;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        padding: 10px 0;
         z-index: 1000;
       }
 
       nav ul {
+        display: flex;
+        justify-content: space-around; /* 横並びで等間隔 */
+        align-items: center;
         list-style: none;
         margin: 0;
         padding: 0;
-        text-align: center;
       }
 
       nav ul li {
-        display: inline;
-        margin: 0 15px;
+        margin: 0 10px; /* 横方向の余白 */
       }
 
       nav ul li a {
         color: white;
         text-decoration: none;
         font-size: 1.2em;
+        text-transform: uppercase;
         font-weight: bold;
       }
 
