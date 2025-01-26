@@ -20,23 +20,21 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 10px 20px;
+        padding: 10px 0;
         z-index: 1000;
       }
 
       nav ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around; /* 等間隔で中央揃え */
         align-items: center;
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-right: 20px;
       }
 
       nav ul li {
         display: inline-block;
-        margin: 20px;
       }
 
       nav ul li a {
@@ -149,6 +147,17 @@
       .show {
         opacity: 1;
       }
+
+      /* レスポンシブデザイン */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 30px; /* スマホ画面でh1のサイズを調整 */
+        }
+
+        nav ul li a {
+          font-size: 1em; /* ナビゲーションのフォントサイズを少し小さく */
+        }
+      }
     </style>
   </head>
   <body>
@@ -193,7 +202,7 @@
       slides[currentSlide].classList.add("show");
 
       // 5秒ごとにスライドを切り替える
-      setInterval(showNextSlide, 2500);
+      setInterval(showNextSlide, 5000);
     </script>
   </body>
 </html>
