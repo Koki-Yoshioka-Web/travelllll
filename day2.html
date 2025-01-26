@@ -15,7 +15,7 @@
         line-height: 1.6;
       }
 
-      /* 背景とナビゲーション */
+      /* ヒーローセクション */
       .hero {
         background-image: url("sisa.png");
         background-size: cover;
@@ -23,6 +23,7 @@
         padding: 80px 0;
         text-align: center;
         color: white;
+        position: relative;
       }
 
       .hero h1 {
@@ -31,19 +32,26 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
+      .hero p {
+        margin: 10px 0 0;
+        font-size: 1.5em;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      }
+
+      /* ナビゲーション */
       nav {
         background-color: rgba(0, 0, 0, 0.6);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        padding: 10px 20px;
+        padding: 10px 0;
         z-index: 1000;
       }
 
       nav ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         list-style: none;
         margin: 0;
@@ -52,7 +60,6 @@
 
       nav ul li {
         display: inline-block;
-        margin: 20px;
       }
 
       nav ul li a {
@@ -90,7 +97,7 @@
         margin-bottom: 20px;
       }
 
-      /* 予定リスト */
+      /* スケジュールリスト */
       .schedule {
         display: flex;
         flex-direction: column;
@@ -115,20 +122,6 @@
         font-size: 1.1em;
       }
 
-      /* スライドインアニメーション */
-      .content {
-        opacity: 0;
-        transform: translateY(50px);
-        animation: fadeInUp 1s forwards;
-      }
-
-      @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
       /* ボタン */
       .btn {
         display: block;
@@ -144,6 +137,38 @@
 
       .btn:hover {
         background-color: #228b22;
+      }
+
+      /* レスポンシブ対応 */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2em; /* ヘッダーテキストを調整 */
+        }
+
+        .hero p {
+          font-size: 1.2em; /* サブテキストを調整 */
+        }
+
+        nav ul {
+          flex-direction: column; /* 縦並びに変更 */
+          padding: 10px 0;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        nav ul li a {
+          font-size: 1em; /* ナビゲーション文字サイズを調整 */
+        }
+
+        h2 {
+          font-size: 1.8em; /* 見出しを少し小さく */
+        }
+
+        .btn {
+          font-size: 1em; /* ボタン文字サイズを調整 */
+        }
       }
     </style>
   </head>
@@ -173,16 +198,16 @@
       <!-- 予定リスト -->
       <div class="schedule">
         <div class="schedule-item">
-          <h3>7:00 - 関西国際空港出発</h3>
-          <p>関西国際空港から沖縄へ向けて出発。</p>
+          <h3>7:00 - ホテルで朝食</h3>
+          <p>地元の美味しい朝食を楽しむ。</p>
         </div>
         <div class="schedule-item">
-          <h3>本島を観光</h3>
-          <p></p>
+          <h3>11:00 - 本島観光</h3>
+          <p>観光スポットを巡り、本島の魅力を堪能。</p>
         </div>
         <div class="schedule-item">
           <h3>17:30 - 那覇空港出発</h3>
-          <p>本島に本当に悔いがないように</p>
+          <p>本島を離れ、石垣島へ。</p>
         </div>
         <div class="schedule-item">
           <h3>18:30 - 石垣空港到着</h3>
@@ -190,11 +215,11 @@
         </div>
         <div class="schedule-item">
           <h3>20:00頃 - ホテルにチェックイン</h3>
-          <p>いい感じのところへ</p>
+          <p>素敵なホテルでリラックス。</p>
         </div>
         <div class="schedule-item">
           <h3>自由時間</h3>
-          <p>素敵な夜を過ごす！</p>
+          <p>夜の石垣島を楽しむ。</p>
         </div>
       </div>
 

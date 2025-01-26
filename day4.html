@@ -15,7 +15,7 @@
         line-height: 1.6;
       }
 
-      /* 背景とナビゲーション */
+      /* ヒーローセクション */
       .hero {
         background-image: url("sisa.png");
         background-size: cover;
@@ -23,6 +23,7 @@
         padding: 80px 0;
         text-align: center;
         color: white;
+        position: relative;
       }
 
       .hero h1 {
@@ -31,13 +32,20 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
+      .hero p {
+        margin: 10px 0 0;
+        font-size: 1.5em;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      }
+
+      /* ナビゲーション */
       nav {
         background-color: rgba(0, 0, 0, 0.6);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        padding: 10px 20px;
+        padding: 10px 0;
         z-index: 1000;
       }
 
@@ -52,7 +60,7 @@
 
       nav ul li {
         display: inline-block;
-        margin: 20px;
+        margin: 0 20px;
       }
 
       nav ul li a {
@@ -144,6 +152,37 @@
 
       .btn:hover {
         background-color: #228b22;
+      }
+
+      /* レスポンシブデザイン */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2em; /* タイトルのサイズを調整 */
+        }
+
+        .hero p {
+          font-size: 1.2em; /* サブタイトルのサイズを調整 */
+        }
+
+        nav ul {
+          flex-direction: column; /* ナビゲーションを縦並びに変更 */
+        }
+
+        nav ul li {
+          margin: 10px 0; /* 各メニューに間隔を追加 */
+        }
+
+        nav ul li a {
+          font-size: 1em; /* フォントサイズを小さく調整 */
+        }
+
+        .btn {
+          font-size: 1em; /* ボタンのフォントサイズを調整 */
+        }
+
+        h2 {
+          font-size: 1.8em; /* 見出しのサイズを調整 */
+        }
       }
     </style>
   </head>
