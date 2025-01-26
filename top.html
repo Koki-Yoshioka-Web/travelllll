@@ -73,6 +73,21 @@
           colorChange 6s ease-in-out infinite; /* アニメーションの時間を変更 */
         font-weight: bold;
       }
+      /* スマホ向けのレスポンシブデザイン */
+      @media (max-width: 768px) {
+        nav ul li {
+          display: block; /* リストを縦に並べる */
+          margin: 10px 0; /* 各メニュー間の余白を設定 */
+        }
+
+        nav ul li a {
+          font-size: 1em; /* フォントサイズを少し小さくする */
+        }
+
+        .hero h1 {
+          font-size: 2em; /* ヒーローセクションの見出しを小さくする */
+        }
+      }
 
       /* 波打つアニメーション */
       @keyframes wave {
