@@ -15,7 +15,7 @@
         line-height: 1.6;
       }
 
-      /* ヒーローセクション */
+      /* 背景とナビゲーション */
       .hero {
         background-image: url("sisa.png");
         background-size: cover;
@@ -23,7 +23,6 @@
         padding: 80px 0;
         text-align: center;
         color: white;
-        position: relative;
       }
 
       .hero h1 {
@@ -32,13 +31,6 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
-      .hero p {
-        margin: 10px 0 0;
-        font-size: 1.5em;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-      }
-
-      /* ナビゲーション */
       nav {
         background-color: rgba(0, 0, 0, 0.6);
         position: absolute;
@@ -51,7 +43,7 @@
 
       nav ul {
         display: flex;
-        justify-content: space-around; /* 等間隔で横並び */
+        justify-content: space-around; /* 横並びで等間隔 */
         align-items: center;
         list-style: none;
         margin: 0;
@@ -59,7 +51,7 @@
       }
 
       nav ul li {
-        display: inline-block;
+        margin: 0 10px; /* 横方向の余白 */
       }
 
       nav ul li a {
@@ -153,35 +145,31 @@
         background-color: #228b22;
       }
 
-      /* レスポンシブ対応 */
+      /* スマホ対応 */
       @media (max-width: 768px) {
         .hero h1 {
-          font-size: 2em; /* ヘッダーテキストを調整 */
-        }
-
-        .hero p {
-          font-size: 1.2em; /* サブテキストを調整 */
+          font-size: 2em; /* ヒーローセクションの文字サイズを小さく */
         }
 
         nav ul {
-          flex-direction: column; /* 縦並びに変更 */
-          padding: 10px 0;
+          flex-wrap: wrap; /* 横並びの要素を自動的に折り返す */
+          justify-content: center; /* 要素を中央揃え */
         }
 
         nav ul li {
-          margin: 10px 0;
+          margin: 5px 10px; /* 各メニューの間隔を調整 */
         }
 
         nav ul li a {
-          font-size: 1em; /* ナビゲーション文字サイズを調整 */
+          font-size: 1em; /* フォントサイズを調整 */
         }
 
         h2 {
-          font-size: 1.8em; /* 見出しを少し小さく */
+          font-size: 1.8em; /* 見出しを小さく */
         }
 
         .btn {
-          font-size: 1em; /* ボタン文字サイズを調整 */
+          font-size: 1em; /* ボタンのフォントサイズも調整 */
         }
       }
     </style>

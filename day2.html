@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2日目 - 沖縄旅行 3泊4日</title>
+    <title>1日目 - 沖縄旅行 3泊4日</title>
     <style>
       body,
       html {
@@ -15,7 +15,7 @@
         line-height: 1.6;
       }
 
-      /* ヒーローセクション */
+      /* 背景とナビゲーション */
       .hero {
         background-image: url("sisa.png");
         background-size: cover;
@@ -23,7 +23,6 @@
         padding: 80px 0;
         text-align: center;
         color: white;
-        position: relative;
       }
 
       .hero h1 {
@@ -32,13 +31,6 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
-      .hero p {
-        margin: 10px 0 0;
-        font-size: 1.5em;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-      }
-
-      /* ナビゲーション */
       nav {
         background-color: rgba(0, 0, 0, 0.6);
         position: absolute;
@@ -51,7 +43,7 @@
 
       nav ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around; /* 横並びで等間隔 */
         align-items: center;
         list-style: none;
         margin: 0;
@@ -59,7 +51,7 @@
       }
 
       nav ul li {
-        display: inline-block;
+        margin: 0 10px; /* 横方向の余白 */
       }
 
       nav ul li a {
@@ -97,7 +89,7 @@
         margin-bottom: 20px;
       }
 
-      /* スケジュールリスト */
+      /* 予定リスト */
       .schedule {
         display: flex;
         flex-direction: column;
@@ -122,6 +114,20 @@
         font-size: 1.1em;
       }
 
+      /* スライドインアニメーション */
+      .content {
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       /* ボタン */
       .btn {
         display: block;
@@ -139,35 +145,31 @@
         background-color: #228b22;
       }
 
-      /* レスポンシブ対応 */
+      /* スマホ対応 */
       @media (max-width: 768px) {
         .hero h1 {
-          font-size: 2em; /* ヘッダーテキストを調整 */
-        }
-
-        .hero p {
-          font-size: 1.2em; /* サブテキストを調整 */
+          font-size: 2em; /* ヒーローセクションの文字サイズを小さく */
         }
 
         nav ul {
-          flex-direction: column; /* 縦並びに変更 */
-          padding: 10px 0;
+          flex-wrap: wrap; /* 横並びの要素を自動的に折り返す */
+          justify-content: center; /* 要素を中央揃え */
         }
 
         nav ul li {
-          margin: 10px 0;
+          margin: 5px 10px; /* 各メニューの間隔を調整 */
         }
 
         nav ul li a {
-          font-size: 1em; /* ナビゲーション文字サイズを調整 */
+          font-size: 1em; /* フォントサイズを調整 */
         }
 
         h2 {
-          font-size: 1.8em; /* 見出しを少し小さく */
+          font-size: 1.8em; /* 見出しを小さく */
         }
 
         .btn {
-          font-size: 1em; /* ボタン文字サイズを調整 */
+          font-size: 1em; /* ボタンのフォントサイズも調整 */
         }
       }
     </style>
@@ -176,7 +178,7 @@
     <!-- ヒーローセクション -->
     <div class="hero">
       <h1>沖縄旅行 3泊4日</h1>
-      <p>2日目 - 沖縄本島から石垣島へ</p>
+      <p>1日目 - 沖縄本島の冒険</p>
     </div>
 
     <!-- ナビゲーション -->
@@ -192,34 +194,26 @@
 
     <!-- コンテンツ -->
     <div class="content">
-      <h2>2日目: 本島観光&石垣島上陸</h2>
-      <p>沖縄本島を楽しんだ後、石垣島へ！</p>
+      <h2>1日目: 沖縄本島観光</h2>
+      <p>沖縄本島での最初の日は、素晴らしい景色を楽しみながら観光します。</p>
 
       <!-- 予定リスト -->
       <div class="schedule">
         <div class="schedule-item">
-          <h3>7:00 - ホテルで朝食</h3>
-          <p>地元の美味しい朝食を楽しむ。</p>
+          <h3>7:00 - 関西国際空港出発</h3>
+          <p>関西国際空港から沖縄へ向けて出発。</p>
         </div>
         <div class="schedule-item">
-          <h3>11:00 - 本島観光</h3>
-          <p>観光スポットを巡り、本島の魅力を堪能。</p>
+          <h3>10:00 - 那覇空港到着</h3>
+          <p>沖縄の那覇空港に到着。</p>
         </div>
         <div class="schedule-item">
-          <h3>17:30 - 那覇空港出発</h3>
-          <p>本島を離れ、石垣島へ。</p>
+          <h3>11:00 - レンタカーゲット</h3>
+          <p>レンタカーを借りて、沖縄本島をドライブ。</p>
         </div>
         <div class="schedule-item">
-          <h3>18:30 - 石垣空港到着</h3>
-          <p>石垣島に上陸！</p>
-        </div>
-        <div class="schedule-item">
-          <h3>20:00頃 - ホテルにチェックイン</h3>
-          <p>素敵なホテルでリラックス。</p>
-        </div>
-        <div class="schedule-item">
-          <h3>自由時間</h3>
-          <p>夜の石垣島を楽しむ。</p>
+          <h3>14:00 - ホエールウォッチング</h3>
+          <p>沖縄で人気のホエールウォッチングを楽しみます。</p>
         </div>
       </div>
 
